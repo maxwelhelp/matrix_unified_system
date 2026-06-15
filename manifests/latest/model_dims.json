@@ -1,0 +1,7 @@
+{
+  "hidden": 896,
+  "n_heads": 14,
+  "n_kv": 2,
+  "head_dim": 64,
+  "kv_groups": 7
+}
