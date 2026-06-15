@@ -1,97 +1,80 @@
-# Matrix Unified System — Qwen Matrix Pseudocode Decompiler
+# Qwen Matrix-Pseudocode Unified System v1
 
-Private research prototype for converting trained Qwen attention heads from weights + activations into executable matrix-pseudocode terms, validating them by reconstruction, ablation, token-specific control, causal path recovery, logit attribution, MLP local-operator summaries, and baselines.
+This bundle is the single-file/one-folder package for the current Qwen matrix-pseudocode project.
 
-## Current evidence snapshot
+## What this package contains
 
-The included final report was built from the latest local experiments:
+- `tools/` — all runnable Python scripts.
+- `results_zips/` — raw experiment archives used as evidence.
+- `final_product/` — final generated Markdown/HTML reports.
+- `docs/` — method docs and analysis reports.
+- `run_scripts/` — commands to rerun everything from scratch or step-by-step.
+- `manifests/unified_metrics_summary.json` — machine-readable summary.
 
-- all-head static atlas: **336 heads**
-- all-head runtime pseudocode: **336 heads**
-- median reconstruction errors:
-  - `score_rel = 1.61e-07`
-  - `A_rel = 2.16e-07`
-  - `Y_rel = 3.41e-07`
-- term ablations:
-  - `no_k_Y_rel median = 1.4078`
-  - `no_content_Y_rel median = 0.6375`
-  - `no_vo_bias_Y_rel median = 0.7643`
-- token directional control: `sign_match = 0.9737`
-- causal path recovery: `target_Y_recovery = 1.0`, `logit_recovery = 1.0`
-- baselines: content-only QK is much worse (`A_rel_mean = 0.8812`, `Y_rel_mean = 13.1906`)
+## Current status
 
-## Core method
+### Attention heads
 
-```python
-weights + architecture + activations
-  -> affine/RoPE/RMS circuit targets
-  -> executable matrix pseudocode terms
-  -> runtime reconstruction
-  -> term/path/logit patch control
-```
+- all-head static atlas: **336 heads**.
+- all-head runtime atlas: **336 heads**.
+- score reconstruction median: **1.609e-07**.
+- attention reconstruction median: **2.159e-07**.
+- head output reconstruction median: **3.406e-07**.
 
-For each attention head, the extracted program is:
-
-```python
-score_ij = constant_delta + q_affine_delta(x_i) + k_affine_delta(x_j) + content_bilinear_delta(x_i, x_j)
-A = softmax(score)
-payload_j = VO_linear(x_j) + VO_bias
-Y_i = sum_j A[i,j] * payload_j
-```
-
-## Repository layout
+This means the learned Qwen attention heads are represented as executable affine matrix-pseudocode:
 
 ```text
-tools/      runnable Python tools
-scripts/    full rerun / rebuild commands
-reports/    final Markdown/HTML report
-manifests/  machine-readable summaries
-docs/       method notes and analysis reports
-examples/   small usage notes
+score_ij = c_delta + q_affine_delta(x_i) + k_affine_delta(x_j) + content_bilinear_delta(x_i, x_j)
+A_i      = softmax(score_i)
+payload_j = C_vo x_j + b_vo
+Y_i      = sum_j A[i,j] * payload_j
 ```
 
-Large proof ZIPs are intentionally **not committed**. Put them into `runs/` locally. GitHub has hard file-size limits, and our raw proof archives include files over 100 MB.
+### Term/control evidence
 
-## Quick start from a fresh clone
+- removing `k_affine`: median Y error **1.4078**.
+- removing `content_bilinear`: median Y error **0.6375**.
+- removing `VO_bias`: median Y error **0.7643**.
 
-```bash
-git clone https://github.com/maxwelhelp/matrix_unified_system.git
-cd matrix_unified_system
-bash scripts/RUN_FULL_PROJECT_FROM_ZERO.sh
-```
+### Token-specific directional control
 
-## Rebuild final report from existing local results
+- L3H6 `k_affine` sweep: rows **110**, sign match **0.9727**.
+- L4H2 `content` sweep: rows **110**, sign match **1.0000**.
 
-Expected local files:
+### Causal path recovery
 
-```text
-runs/atlas_full_all.zip
-runs/atlas_gen_trace_full_python.zip
-runs/controls_v4_results.zip
-runs/controls_baselines_top_heads_fixed.zip
-```
+- L3H6 -> L4H8 recovery mean: **1.0000**.
+- L2H1 -> L3H6 recovery mean: **1.0000**.
 
-Then run:
+### Baselines
 
-```bash
-bash scripts/REBUILD_FINAL_REPORT.sh
-```
+- content-only QK baseline A_rel mean: **0.8812**.
+- content-only QK baseline Y_rel mean: **13.1906**.
 
-Open:
+This confirms that a simple content-only attention explanation is much weaker than the full affine matrix-pseudocode decomposition.
 
-```bash
-xdg-open runs/final_pseudocode_product_v5_FULL/FINAL_MATRIX_PSEUDOCODE_REPORT.html
-```
+## Main files to open
 
-## Main commands
+1. `final_product/final_pseudocode_product_v5_FULL/FINAL_MATRIX_PSEUDOCODE_REPORT.html`
+2. `final_product/final_pseudocode_product_v5_FULL/FINAL_MATRIX_PSEUDOCODE_REPORT.md`
+3. `docs/controls_v4_results_analysis_report.md`
+4. `docs/atlas_full_analysis_report.md`
+5. `manifests/unified_metrics_summary.json`
 
-See [`scripts/COMMANDS.md`](scripts/COMMANDS.md).
+## How to rerun
 
-## Status
+Use scripts in `run_scripts/`:
 
-This is a working research prototype, not a polished pip package yet. The next product steps are:
+- `01_run_full_atlas.sh` — full static/runtime/MLP atlas.
+- `02_run_controls_v4.sh` — controls: token sweep, causal recovery, logit patch attribution, MLP operator.
+- `03_run_final_product.sh` — rebuild final report from result zips.
+- `RUN_EVERYTHING_FROM_SCRATCH.sh` — long full run.
+- `REBUILD_FROM_EXISTING_RESULTS.sh` — only rebuild reports from existing zips.
 
-1. merge generation trace + patch-based logit attribution into a per-token why-token report;
-2. expand token-control sweep to more heads/tasks/tokens;
-3. build richer MLP operator dictionary with neuron clusters, output directions, route labels, and patch groups;
-4. optionally add external TransformerLens / SAE baselines.
+## What is still optional / next-level
+
+- richer MLP dictionary with neuron clusters and route labels;
+- unified why-token HTML report that merges generation trace with patch-based logit attribution;
+- external SAE / TransformerLens baseline;
+- larger token-control sweep over more heads and prompts;
+- distillation / transfer experiments.

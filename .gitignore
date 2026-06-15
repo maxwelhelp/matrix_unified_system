@@ -1,5 +1,6 @@
-# generated runs/results
 runs/
+results_zips/
+final_product/*/_staged_inputs/
 *.zip
 *.pt
 *.pth

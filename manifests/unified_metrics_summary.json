@@ -1,0 +1,181 @@
+{
+  "atlas_runtime": {
+    "heads": 336,
+    "score_rel_mean": {
+      "median": 1.6094195531834998e-07,
+      "mean": 1.7143095979924073e-07,
+      "p90": 2.8352104131101896e-07,
+      "max": 7.553898022649719e-07
+    },
+    "A_rel_mean": {
+      "median": 2.1586479877673998e-07,
+      "mean": 7.029959200159288e-07,
+      "p90": 1.1494760272512394e-06,
+      "max": 1.708897895014161e-05
+    },
+    "Y_rel_mean": {
+      "median": 3.405552359373824e-07,
+      "mean": 6.471155275479592e-07,
+      "p90": 1.1539499986668034e-06,
+      "max": 1.1240978930497173e-05
+    },
+    "no_k_Y_rel_mean": {
+      "median": 1.4077639250705638,
+      "mean": 2.3666885514538207,
+      "p90": 4.652494975676139,
+      "max": 23.18793598810832
+    },
+    "no_content_Y_rel_mean": {
+      "median": 0.6375230513513088,
+      "mean": 0.6175053095994595,
+      "p90": 0.9125853776931763,
+      "max": 3.3450054451823235
+    },
+    "no_vo_bias_Y_rel_mean": {
+      "median": 0.7643074880664547,
+      "mean": 1.2441773758277237,
+      "p90": 3.2541100153078637,
+      "max": 7.253322134415309
+    },
+    "no_const_Y_rel_mean": {
+      "median": 0.08989990913930038,
+      "mean": 0.20220435153544863,
+      "p90": 0.5668226300428311,
+      "max": 1.6674991054460406
+    },
+    "no_q_Y_rel_mean": {
+      "median": 0.11021569464355707,
+      "mean": 0.14701258378103085,
+      "p90": 0.29785122846563655,
+      "max": 0.9073315399388472
+    }
+  },
+  "static": {
+    "heads": 336,
+    "head_types": [
+      [
+        "positional_affine",
+        116
+      ],
+      [
+        "mixed",
+        98
+      ],
+      [
+        "positional_affine+vo_bias",
+        30
+      ],
+      [
+        "positional_affine+strong_vo_bias",
+        29
+      ],
+      [
+        "mixed+strong_vo_bias",
+        18
+      ],
+      [
+        "content_bilinear",
+        14
+      ],
+      [
+        "mixed+vo_bias",
+        12
+      ],
+      [
+        "key_affine",
+        6
+      ],
+      [
+        "query_affine+strong_vo_bias",
+        3
+      ],
+      [
+        "content_bilinear+vo_bias",
+        3
+      ],
+      [
+        "query_affine",
+        2
+      ],
+      [
+        "key_affine+vo_bias",
+        2
+      ],
+      [
+        "key_content",
+        2
+      ],
+      [
+        "key_content+vo_bias",
+        1
+      ]
+    ]
+  },
+  "mlp_accounting": {
+    "rows": 24,
+    "mlp_rec_rel_median": null,
+    "mlp_rec_rel_max": null
+  },
+  "token_control_sweep": {
+    "L3H6_rows": 110,
+    "L3H6_sign_match_rate": 0.9727272727272728,
+    "L4H2_rows": 110,
+    "L4H2_sign_match_rate": 1.0
+  },
+  "causal_path_recovery": {
+    "L3H6_to_L4H8": {
+      "ablate_head_target_Y_rel_mean": 0.0724842082709074,
+      "ablate_head_target_Y_rel_median": 0.07229289039969444,
+      "replace_full_target_Y_rel_mean": 0.0,
+      "replace_full_target_Y_rel_median": 0.0,
+      "target_Y_recovery_ratio_mean": 1.0,
+      "target_Y_recovery_ratio_median": 1.0,
+      "ablate_head_logit_rel_mean": 0.017143915116321295,
+      "ablate_head_logit_rel_median": 0.016297537833452225,
+      "replace_full_logit_rel_mean": 0.0,
+      "replace_full_logit_rel_median": 0.0,
+      "logit_recovery_ratio_mean": 1.0,
+      "logit_recovery_ratio_median": 1.0,
+      "rows": 16
+    },
+    "L2H1_to_L3H6": {
+      "ablate_head_target_Y_rel_mean": 0.42383387219160795,
+      "ablate_head_target_Y_rel_median": 0.3953823745250702,
+      "replace_full_target_Y_rel_mean": 0.0,
+      "replace_full_target_Y_rel_median": 0.0,
+      "target_Y_recovery_ratio_mean": 1.0,
+      "target_Y_recovery_ratio_median": 1.0,
+      "ablate_head_logit_rel_mean": 0.1364499875344336,
+      "ablate_head_logit_rel_median": 0.1262679174542427,
+      "replace_full_logit_rel_mean": 0.0,
+      "replace_full_logit_rel_median": 0.0,
+      "logit_recovery_ratio_mean": 1.0,
+      "logit_recovery_ratio_median": 1.0,
+      "rows": 16
+    }
+  },
+  "logit_patch_attr": {
+    "rows": 35,
+    "max_positive": 17.8828125,
+    "max_negative": -0.765625
+  },
+  "mlp_operator": {
+    "rows": 192,
+    "J_rank90_mean": 351.3489583333333,
+    "J_rank90_median": 357.5
+  },
+  "baselines": {
+    "rows": 128,
+    "content_only_A_rel_mean": 0.8812118904897943,
+    "content_only_Y_rel_mean": 13.190649726428092
+  },
+  "generation_trace": {
+    "steps": 4,
+    "next_tokens": [
+      "ĠThe",
+      "Ġfunction",
+      "Ġshould",
+      "Ġtake"
+    ]
+  }
+}
