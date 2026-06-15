@@ -1,6 +1,6 @@
 {
-  "created_at_unix": 1781541224,
-  "git_head_before_commit": "38341c73f80cb2a636a44994f777c689aa39654d",
+  "created_at_unix": 1781541302,
+  "git_head_before_commit": "d6c00b7e9a4bdc9ac5b6c44100111279fd7156d0",
   "published_files": [
     {
       "path": "reports/latest/ENHANCED_PRODUCT_SUMMARY.md",
@@ -100,7 +100,7 @@
     },
     {
       "path": "manifests/latest/publish_manifest.json",
-      "bytes": 1961
+      "bytes": 2607
     }
   ],
   "note": "Lightweight summaries only. Heavy runs/*.zip are local and intentionally ignored."
