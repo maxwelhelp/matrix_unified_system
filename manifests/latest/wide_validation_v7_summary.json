@@ -1,0 +1,60 @@
+{
+  "tables": [
+    {
+      "file": "reports/latest/tables/v7_logit_attr_math.csv",
+      "rows": 35,
+      "causal_logit_contribution_mean": 1.0872767857142858
+    },
+    {
+      "file": "reports/latest/tables/v7_logit_attr_python.csv",
+      "rows": 35,
+      "causal_logit_contribution_mean": 1.652455357142857
+    },
+    {
+      "file": "reports/latest/tables/v7_logit_attr_text.csv",
+      "rows": 35,
+      "causal_logit_contribution_mean": 1.1180803571428573
+    },
+    {
+      "file": "reports/latest/tables/v7_mlp_operator_wide.csv",
+      "rows": 384,
+      "J_rank90_mean": 351.8958333333333,
+      "J_rank95_mean": 447.3411458333333,
+      "J_rank99_mean": 616.6848958333334
+    },
+    {
+      "file": "reports/latest/tables/v7_recovery_L15H5_to_L16H3.csv",
+      "rows": 16,
+      "target_Y_recovery_ratio_mean": 1.0,
+      "logit_recovery_ratio_mean": 1.0
+    },
+    {
+      "file": "reports/latest/tables/v7_recovery_L2H1_to_L3H6.csv",
+      "rows": 16,
+      "target_Y_recovery_ratio_mean": 1.0,
+      "logit_recovery_ratio_mean": 1.0
+    },
+    {
+      "file": "reports/latest/tables/v7_recovery_L3H6_to_L4H8.csv",
+      "rows": 16,
+      "target_Y_recovery_ratio_mean": 1.0,
+      "logit_recovery_ratio_mean": 1.0
+    },
+    {
+      "file": "reports/latest/tables/v7_token_sweep_L11H11_vobias.csv",
+      "rows": 110
+    },
+    {
+      "file": "reports/latest/tables/v7_token_sweep_L16H1_k.csv",
+      "rows": 110
+    },
+    {
+      "file": "reports/latest/tables/v7_token_sweep_L3H6_k.csv",
+      "rows": 110
+    },
+    {
+      "file": "reports/latest/tables/v7_token_sweep_L4H2_content.csv",
+      "rows": 110
+    }
+  ]
+}
