@@ -1,0 +1,486 @@
+{
+  "why_token": {
+    "logit_patch_rows": 35,
+    "generation_steps_found": 4,
+    "top_positive": [
+      {
+        "side": "positive",
+        "rank": 1,
+        "component": "mlp",
+        "layer": "0",
+        "head": "-1",
+        "causal_logit_contribution": 17.8828125,
+        "logit_rel": 1.1214687824249268,
+        "top1_match": 0.0
+      },
+      {
+        "side": "positive",
+        "rank": 2,
+        "component": "mlp",
+        "layer": "23",
+        "head": "-1",
+        "causal_logit_contribution": 6.96875,
+        "logit_rel": 0.5380465388298035,
+        "top1_match": 0.800000011920929
+      },
+      {
+        "side": "positive",
+        "rank": 3,
+        "component": "mlp",
+        "layer": "2",
+        "head": "-1",
+        "causal_logit_contribution": 4.875,
+        "logit_rel": 0.9360265731811523,
+        "top1_match": 0.10000000149011612
+      },
+      {
+        "side": "positive",
+        "rank": 4,
+        "component": "mlp",
+        "layer": "1",
+        "head": "-1",
+        "causal_logit_contribution": 3.8125,
+        "logit_rel": 0.5062581300735474,
+        "top1_match": 0.4000000059604645
+      },
+      {
+        "side": "positive",
+        "rank": 5,
+        "component": "mlp",
+        "layer": "9",
+        "head": "-1",
+        "causal_logit_contribution": 3.265625,
+        "logit_rel": 0.2448156177997589,
+        "top1_match": 0.699999988079071
+      },
+      {
+        "side": "positive",
+        "rank": 6,
+        "component": "mlp",
+        "layer": "4",
+        "head": "-1",
+        "causal_logit_contribution": 3.15625,
+        "logit_rel": 0.34675899147987366,
+        "top1_match": 0.699999988079071
+      },
+      {
+        "side": "positive",
+        "rank": 7,
+        "component": "head",
+        "layer": "23",
+        "head": "1",
+        "causal_logit_contribution": 3.109375,
+        "logit_rel": 0.2136906087398529,
+        "top1_match": 0.800000011920929
+      },
+      {
+        "side": "positive",
+        "rank": 8,
+        "component": "mlp",
+        "layer": "5",
+        "head": "-1",
+        "causal_logit_contribution": 2.6875,
+        "logit_rel": 0.4308302104473114,
+        "top1_match": 0.699999988079071
+      },
+      {
+        "side": "positive",
+        "rank": 9,
+        "component": "mlp",
+        "layer": "3",
+        "head": "-1",
+        "causal_logit_contribution": 2.21875,
+        "logit_rel": 0.6306995153427124,
+        "top1_match": 0.5
+      },
+      {
+        "side": "positive",
+        "rank": 10,
+        "component": "mlp",
+        "layer": "13",
+        "head": "-1",
+        "causal_logit_contribution": 1.96875,
+        "logit_rel": 0.23083274066448212,
+        "top1_match": 0.699999988079071
+      }
+    ],
+    "top_negative": [
+      {
+        "side": "negative",
+        "rank": 1,
+        "component": "mlp",
+        "layer": "14",
+        "head": "-1",
+        "causal_logit_contribution": -0.765625,
+        "logit_rel": 0.23079751431941986,
+        "top1_match": 0.800000011920929
+      },
+      {
+        "side": "negative",
+        "rank": 2,
+        "component": "mlp",
+        "layer": "17",
+        "head": "-1",
+        "causal_logit_contribution": -0.53125,
+        "logit_rel": 0.27221763134002686,
+        "top1_match": 0.800000011920929
+      },
+      {
+        "side": "negative",
+        "rank": 3,
+        "component": "head",
+        "layer": "4",
+        "head": "8",
+        "causal_logit_contribution": -0.375,
+        "logit_rel": 0.05108766630291939,
+        "top1_match": 0.8999999761581421
+      },
+      {
+        "side": "negative",
+        "rank": 4,
+        "component": "head",
+        "layer": "15",
+        "head": "6",
+        "causal_logit_contribution": -0.140625,
+        "logit_rel": 0.03301830589771271,
+        "top1_match": 1.0
+      },
+      {
+        "side": "negative",
+        "rank": 5,
+        "component": "mlp",
+        "layer": "16",
+        "head": "-1",
+        "causal_logit_contribution": -0.0625,
+        "logit_rel": 0.3310120105743408,
+        "top1_match": 0.8999999761581421
+      },
+      {
+        "side": "negative",
+        "rank": 6,
+        "component": "head",
+        "layer": "11",
+        "head": "11",
+        "causal_logit_contribution": 0.0,
+        "logit_rel": 0.011387866921722889,
+        "top1_match": 0.8999999761581421
+      },
+      {
+        "side": "negative",
+        "rank": 7,
+        "component": "mlp",
+        "layer": "8",
+        "head": "-1",
+        "causal_logit_contribution": 0.0,
+        "logit_rel": 0.24486558139324188,
+        "top1_match": 0.800000011920929
+      },
+      {
+        "side": "negative",
+        "rank": 8,
+        "component": "head",
+        "layer": "23",
+        "head": "8",
+        "causal_logit_contribution": 0.015625,
+        "logit_rel": 0.06082849204540253,
+        "top1_match": 0.8999999761581421
+      },
+      {
+        "side": "negative",
+        "rank": 9,
+        "component": "head",
+        "layer": "3",
+        "head": "6",
+        "causal_logit_contribution": 0.015625,
+        "logit_rel": 0.01749412529170513,
+        "top1_match": 1.0
+      },
+      {
+        "side": "negative",
+        "rank": 10,
+        "component": "head",
+        "layer": "4",
+        "head": "2",
+        "causal_logit_contribution": 0.015625,
+        "logit_rel": 0.06294037401676178,
+        "top1_match": 0.8999999761581421
+      }
+    ],
+    "component_counts": {
+      "mlp": 24,
+      "head": 11
+    }
+  },
+  "mlp_dictionary_v2": {
+    "mlp_rows": 192,
+    "mlp_layers": 24,
+    "role_counts": {
+      "mixed_mlp_operator": 18,
+      "compact_high_effect_operator": 6,
+      "strong_residual_writer": 2,
+      "high_jacobian_transformer": 2
+    },
+    "top_layers_by_out_norm": [
+      {
+        "layer": 23,
+        "roles": "strong_residual_writer,high_jacobian_transformer,compact_high_effect_operator",
+        "out_norm_mean": 60.1509222984314,
+        "J_norm_mean": 18.564299821853638,
+        "J_rank90_mean": 172.125,
+        "J_rank99_mean": 513.375,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          2539,
+          4144,
+          4861,
+          2607,
+          4391,
+          2788,
+          537,
+          3383,
+          1863,
+          4749,
+          4284,
+          2505
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 21,
+        "roles": "strong_residual_writer,compact_high_effect_operator",
+        "out_norm_mean": 18.315423250198364,
+        "J_norm_mean": 10.840935230255127,
+        "J_rank90_mean": 312.875,
+        "J_rank99_mean": 591.25,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          4663,
+          2930,
+          426,
+          3936,
+          2940,
+          3658,
+          1507,
+          2171,
+          2612,
+          2164,
+          4492,
+          3103
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 20,
+        "roles": "compact_high_effect_operator",
+        "out_norm_mean": 17.106544971466064,
+        "J_norm_mean": 12.585579872131348,
+        "J_rank90_mean": 314.125,
+        "J_rank99_mean": 590.5,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          93,
+          4024,
+          1942,
+          3722,
+          718,
+          3366,
+          4575,
+          637,
+          2858,
+          408,
+          3296,
+          481
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 22,
+        "roles": "high_jacobian_transformer,compact_high_effect_operator",
+        "out_norm_mean": 16.908110737800598,
+        "J_norm_mean": 14.526637077331543,
+        "J_rank90_mean": 290.625,
+        "J_rank99_mean": 580.875,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          1222,
+          82,
+          3358,
+          1069,
+          1904,
+          3035,
+          1439,
+          1082,
+          2763,
+          2507,
+          4271,
+          3967
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 19,
+        "roles": "compact_high_effect_operator",
+        "out_norm_mean": 12.440159440040588,
+        "J_norm_mean": 11.579264640808105,
+        "J_rank90_mean": 334.5,
+        "J_rank99_mean": 605.25,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          63,
+          1361,
+          4794,
+          2738,
+          822,
+          3172,
+          151,
+          48,
+          2580,
+          476,
+          569,
+          2227
+        ],
+        "n_rows": 8
+      }
+    ],
+    "top_layers_by_gate_sensitivity": [
+      {
+        "layer": 0,
+        "roles": "mixed_mlp_operator",
+        "out_norm_mean": 4.228780448436737,
+        "J_norm_mean": 4.723771780729294,
+        "J_rank90_mean": 364.5,
+        "J_rank99_mean": 633.125,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          3048,
+          50,
+          4786,
+          2546,
+          3486,
+          392,
+          4852,
+          308,
+          2456,
+          4341,
+          1110,
+          2405
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 1,
+        "roles": "mixed_mlp_operator",
+        "out_norm_mean": 3.164806693792343,
+        "J_norm_mean": 4.641926020383835,
+        "J_rank90_mean": 385.625,
+        "J_rank99_mean": 646.875,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          3516,
+          671,
+          3052,
+          1619,
+          2874,
+          4431,
+          3599,
+          4227,
+          3675,
+          3331,
+          3393,
+          254
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 2,
+        "roles": "mixed_mlp_operator",
+        "out_norm_mean": 2.6629328578710556,
+        "J_norm_mean": 5.056584596633911,
+        "J_rank90_mean": 378.625,
+        "J_rank99_mean": 639.5,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          264,
+          2586,
+          4395,
+          488,
+          2701,
+          3370,
+          4418,
+          1218,
+          886,
+          3162,
+          4318,
+          188
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 3,
+        "roles": "mixed_mlp_operator",
+        "out_norm_mean": 3.6713031232357025,
+        "J_norm_mean": 6.033693909645081,
+        "J_rank90_mean": 382.25,
+        "J_rank99_mean": 641.125,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          2673,
+          674,
+          4101,
+          3477,
+          2430,
+          995,
+          4728,
+          1213,
+          2325,
+          2493,
+          732,
+          1250
+        ],
+        "n_rows": 8
+      },
+      {
+        "layer": 4,
+        "roles": "mixed_mlp_operator",
+        "out_norm_mean": 4.936255574226379,
+        "J_norm_mean": 6.826974153518677,
+        "J_rank90_mean": 390.75,
+        "J_rank99_mean": 650.0,
+        "no_gate_delta_rel_mean": null,
+        "gate_only_delta_rel_mean": null,
+        "top_neurons": [
+          2973,
+          880,
+          1872,
+          2225,
+          3033,
+          3988,
+          2914,
+          1433,
+          3364,
+          4646,
+          4541,
+          3340
+        ],
+        "n_rows": 8
+      }
+    ]
+  },
+  "final_summary_present": true,
+  "checklist_has_na": false,
+  "recommended_next_experiments": [
+    "run patch-based logit attribution for every generated token, not only the first target",
+    "run token-control sweep on 20-50 heads across code/math/text prompts",
+    "cluster MLP top neurons by W_down output direction and patch neuron groups",
+    "connect causal path recovery pairs to why-token reports"
+  ]
+}

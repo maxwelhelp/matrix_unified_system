@@ -1,7 +1,11 @@
 {
-  "created_at_unix": 1781540391,
-  "git_head_before_commit": "19b19c70b9c274d0b32629d743a95fddaf93925f",
+  "created_at_unix": 1781541224,
+  "git_head_before_commit": "38341c73f80cb2a636a44994f777c689aa39654d",
   "published_files": [
+    {
+      "path": "reports/latest/ENHANCED_PRODUCT_SUMMARY.md",
+      "bytes": 920
+    },
     {
       "path": "reports/latest/FINAL_MATRIX_PSEUDOCODE_REPORT.html",
       "bytes": 22229
@@ -15,8 +19,16 @@
       "bytes": 7179
     },
     {
+      "path": "reports/latest/MLP_OPERATOR_DICTIONARY_v2.md",
+      "bytes": 7741
+    },
+    {
       "path": "reports/latest/PRODUCT_READINESS_CHECKLIST.md",
       "bytes": 971
+    },
+    {
+      "path": "reports/latest/WHY_TOKEN_REPORT.md",
+      "bytes": 2542
     },
     {
       "path": "reports/latest/tables/all_heads_runtime_summary.csv",
@@ -39,6 +51,10 @@
       "bytes": 3352
     },
     {
+      "path": "reports/latest/tables/mlp_layer_roles.csv",
+      "bytes": 3890
+    },
+    {
       "path": "reports/latest/tables/mlp_operator_summary.csv",
       "bytes": 196577
     },
@@ -59,8 +75,16 @@
       "bytes": 24933
     },
     {
+      "path": "reports/latest/tables/why_token_top_contributors.csv",
+      "bytes": 2694
+    },
+    {
       "path": "manifests/latest/atlas_summary.json",
       "bytes": 58537
+    },
+    {
+      "path": "manifests/latest/enhanced_summary.json",
+      "bytes": 11896
     },
     {
       "path": "manifests/latest/final_summary.json",
@@ -73,6 +97,10 @@
     {
       "path": "manifests/latest/model_dims.json",
       "bytes": 85
+    },
+    {
+      "path": "manifests/latest/publish_manifest.json",
+      "bytes": 1961
     }
   ],
   "note": "Lightweight summaries only. Heavy runs/*.zip are local and intentionally ignored."
