@@ -1,0 +1,11 @@
+# generated runs/results
+runs/
+*.zip
+*.pt
+*.pth
+*.safetensors
+__pycache__/
+*.pyc
+.env
+.cache/
+qwen_program_cache*/
